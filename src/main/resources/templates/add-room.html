@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms view</title>
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+        <nav>
+
+        </nav>
+    </div>
+</header>
+<div class="mainContent">
+    <h3>Add new room</h3>
+
+    <form id="form" name="room" th:action="@{'/saveroom'}" th:object="${room}"  method="post" onsubmit="return isEmpty(this)">
+
+        <label for="capacity">Capacity</label>
+        <input type="text" th:field="${room.capacity}"  id="capacity" placeholder="capacity">
+        <label for="price">Price</label>
+        <input type="text" th:field="${room.price}"  id="price" placeholder="price">
+        <label for="description">Description</label>
+        <input type="text" th:field="${room.description}"  id="description" placeholder="description">
+
+
+        <button class="button" type="submit">Save</button>
+        <a  class="button" href="/rooms " role="button" >Cancel</a>
+
+
+    </form>
+    <script>
+        function isEmpty(form){
+            var x=form.getElementsByTagName("input");
+            for(var i=0;i<x.length;i++){
+                if(x[i].value==0 || x[i].value==""){
+                    alert("Please insert " + x[i].id+ "!");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+</div>
+</body>
+</html>
