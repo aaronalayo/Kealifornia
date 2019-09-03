@@ -27,7 +27,7 @@ public class RoomsController {
     public String rooms(Model model) {
 
         List<Rooms> roomsList = roomsRepo.findAllRooms();
-        model.addAttribute("roomslist", roomsList);
+        model.addAttribute("rooms", roomsList);
 
         return "show-rooms";
     }
