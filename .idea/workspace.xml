@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e859f2-7173-4cf9-8b95-6d38822bd955" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show-rooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/show-rooms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/show-rooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/show-rooms.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +22,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,17 +122,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5ea6b86" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5ea6b86" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@70b7da44" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -132,12 +143,28 @@
       <workItem from="1567512585704" duration="313000" />
       <workItem from="1567513262529" duration="892000" />
       <workItem from="1567515554953" duration="3229000" />
-      <workItem from="1567545211224" duration="4625000" />
+      <workItem from="1567545211224" duration="4887000" />
+      <workItem from="1567584942153" duration="4726000" />
+      <workItem from="1567594240591" duration="4764000" />
+      <workItem from="1567623506591" duration="3368000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

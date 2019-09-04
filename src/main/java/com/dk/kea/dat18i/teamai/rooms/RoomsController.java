@@ -3,9 +3,7 @@ package com.dk.kea.dat18i.teamai.rooms;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -50,6 +48,35 @@ public class RoomsController {
 
 
         roomsRepo.createRoom(newRoom);
+
+        return "redirect:/rooms";
+    }
+
+    @RequestMapping(value = "rooms/delete/{room_id}")
+    public String removeScreening(@PathVariable int room_id) {
+
+        roomsRepo.deleteRoom(room_id);
+
+        return "redirect:/rooms";
+    }
+
+
+    @GetMapping("/rooms/edit/{room_id}")
+    public String editRoom (Model m, @PathVariable(name="room_id") int room_id){
+       Rooms roomToEdit= roomsRepo.findRoom(room_id);
+        m.addAttribute("editroom",roomToEdit);
+        return "edit-room";
+    }
+
+    @RequestMapping(value = "/updateroom", method= RequestMethod.POST)
+    public String saveEditRoom(@ModelAttribute Rooms room){
+
+        room.setRoom_number(room.getRoom_number());
+        room.setCapacity(room.getCapacity());
+        room.setPrice(room.getPrice());
+        room.setDescription(room.getDescription());
+        System.out.println(room);
+        roomsRepo.update(room);
 
         return "redirect:/rooms";
     }

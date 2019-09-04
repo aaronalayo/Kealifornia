@@ -20,10 +20,17 @@
 
     <form id="form" name="room" th:action="@{'/saveroom'}" th:object="${room}"  method="post" onsubmit="return isEmpty(this)">
 
+        <label for="room number">Room Number</label>
+        <input type="text" th:field="${room.room_number}"  id="room number" placeholder="room number">
+
         <label for="capacity">Capacity</label>
         <input type="text" th:field="${room.capacity}"  id="capacity" placeholder="capacity">
+
+
+
         <label for="price">Price</label>
         <input type="text" th:field="${room.price}"  id="price" placeholder="price">
+
         <label for="description">Description</label>
         <input type="text" th:field="${room.description}"  id="description" placeholder="description">
 

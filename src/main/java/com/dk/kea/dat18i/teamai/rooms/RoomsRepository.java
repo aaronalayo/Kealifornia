@@ -64,8 +64,8 @@ public class RoomsRepository {
 
                 PreparedStatement ps = connection.prepareStatement("INSERT INTO rooms VALUES (null,?,?,?,?)", new String[]{"room_id"});
 
-                ps.setInt(1, rooms.getCapacity());
-                ps.setInt(2, rooms.getRoom_number());
+                ps.setInt(1, rooms.getRoom_number());
+                ps.setInt(2, rooms.getCapacity());
                 ps.setDouble(3, rooms.getPrice());
                 ps.setString(4, rooms.getDescription());
 
@@ -75,7 +75,7 @@ public class RoomsRepository {
         jdbc.update(psc);
         return rooms;
     }
-    public void emptyRoom(int room_id) {
+    public void deleteRoom(int room_id) {
 
         jdbc.execute("DELETE FROM rooms WHERE room_id = " + room_id);
     }
@@ -89,12 +89,15 @@ public class RoomsRepository {
 
                 PreparedStatement ps = connection.prepareStatement("UPDATE rooms SET room_number = ?, capacity = ?, price = ?, description = ? WHERE room_id =  " + room.getRoom_id(), new String[]{"room_id"});
 
-                ps.setInt(1, room.getCapacity());
-                ps.setInt(2,room.getRoom_number());
+                System.out.println(room.getRoom_number());
+                ps.setInt(1,room.getRoom_number());
+                ps.setInt(2, room.getCapacity());
                 ps.setDouble(3, room.getPrice());
                 ps.setString(4, room.getDescription());
 
                 return ps;
+
+
             }
         };
 
