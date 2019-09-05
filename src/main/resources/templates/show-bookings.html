@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List of bookings</title>
+</head>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+        <nav>
+
+        </nav>
+    </div>
+</header>
+    <div id="booking-container">
+    <table class="booking booking-hover" id="bookingTable">
+        <thead class="thead-dark">
+        <tr class="d-flex">
+            <th class="col-2">Start date</th>
+            <th class="col-2">End date</th>
+            <th class="col-2">Customer info</th>
+            <th class="col-2">Room id</th>
+            <!-- columns for edit and delete button -->
+            <th class="col-1"></th>
+            <th class="col-1"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="d-flex" th:each="booking : ${bookingList}">
+            <td class="col-2" th:text="*{booking.check_in}" th:value="${booking}"/>
+            <td class="col-2" th:text="${booking.check_out}"/>
+            <td class="col-2" th:text="${booking.customer_id}"/>
+            <td class="col-2" th:text="${booking.room_id}"/>
+            <td class="col-1">
+            </td>
+            <td class="col-1">
+                <button>
+                    <span class="fas fa-trash"></span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</html>

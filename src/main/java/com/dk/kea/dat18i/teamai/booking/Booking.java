@@ -4,7 +4,7 @@ package com.dk.kea.dat18i.teamai.booking;
 import com.dk.kea.dat18i.teamai.customer.Customer;
 import com.dk.kea.dat18i.teamai.rooms.Rooms;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Booking {
 

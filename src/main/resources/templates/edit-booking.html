@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit the booking</title>
+</head>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+        <nav>
+
+        </nav>
+    </div>
+</header>
+<body>
+<form id="form" action="/bookings/{id}" method="put" th:object="${booking}" onsubmit="return isEmpty(this)">
+
+
+    <input type="hidden" th:value="*{booking_id}">
+
+    <label for="CheckIn">Check In Date</label>
+    <input type="date" th:value="${booking.check_in}" id="CheckIn">
+
+    <label for="Checkout">Check Out Date</label>
+    <input type="date" th:value="${booking.check_out}" id="CheckOut">
+
+    <label for="room">Room</label>
+    <input type="text" th:value="${booking.room_id}"  id="room">
+
+    <button class="button" type="submit">Save</button>
+    <script>
+        function isEmpty(form){
+            var x=form.getElementsByTagName("input");
+            for(var i=0;i<x.length;i++){
+                if(x[i].value==0 || x[i].value==""){
+                    alert("Please insert " + x[i].id+ "!");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+</form>
+</body>
+</html>
