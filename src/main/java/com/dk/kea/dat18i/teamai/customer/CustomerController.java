@@ -42,9 +42,9 @@ public class CustomerController {
     public String saveCustomer(@ModelAttribute Customer customer){
         Customer newCustomer = new Customer();
 
-        newCustomer.setFirst_name(newCustomer.getFirst_name());
-        newCustomer.setLast_name(newCustomer.getLast_name());
-        newCustomer.setPhone_number(newCustomer.getPhone_number());
+        newCustomer.setFirst_name(customer.getFirst_name());
+        newCustomer.setLast_name(customer.getLast_name());
+        newCustomer.setPhone_number(customer.getPhone_number());
 
 
         customerRepo.createCustomer(newCustomer);

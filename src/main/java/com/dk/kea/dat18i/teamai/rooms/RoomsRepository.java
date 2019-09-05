@@ -89,7 +89,7 @@ public class RoomsRepository {
 
                 PreparedStatement ps = connection.prepareStatement("UPDATE rooms SET room_number = ?, capacity = ?, price = ?, description = ? WHERE room_id =  " + room.getRoom_id(), new String[]{"room_id"});
 
-                System.out.println(room.getRoom_number());
+
                 ps.setInt(1,room.getRoom_number());
                 ps.setInt(2, room.getCapacity());
                 ps.setDouble(3, room.getPrice());

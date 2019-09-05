@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e859f2-7173-4cf9-8b95-6d38822bd955" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-booking.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/show-bookings.html" afterDir="false" />
@@ -12,6 +13,22 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add-customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/show-customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-room.html" afterDir="false" />
+>>>>>>> a799fedce2fe21ae861cc03538c4252873cd7920
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -272,20 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.KealiforniaApplication">
-    <configuration name="KealiforniaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Kealifornia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dk.kea.dat18i.teamai.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dk.kea.dat18i.teamai.KealiforniaApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="KealiforniaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Kealifornia" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dk.kea.dat18i.teamai.KealiforniaApplication" />
@@ -294,11 +298,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.KealiforniaApplication (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -307,12 +306,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7bef565f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b78979a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7bef565f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c0302a9b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b78979a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@38e8f3d9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +337,9 @@
       <workItem from="1567545211224" duration="4887000" />
       <workItem from="1567584942153" duration="4726000" />
       <workItem from="1567594240591" duration="4764000" />
-      <workItem from="1567623506591" duration="10746000" />
+      <workItem from="1567623506591" duration="10915000" />
+      <workItem from="1567678879041" duration="537000" />
+      <workItem from="1567679476693" duration="5973000" />
     </task>
     <servers />
   </component>
@@ -461,6 +462,7 @@
       <path value="$PROJECT_DIR$/Kealifornia" />
     </ignored-roots>
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -560,5 +562,9 @@
         </state>
       </provider>
     </entry>
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Kealifornia$KealiforniaApplication.ic" NAME="KealiforniaApplication Coverage Results" MODIFIED="1567679298986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+>>>>>>> a799fedce2fe21ae861cc03538c4252873cd7920
   </component>
 </project>

@@ -10,14 +10,10 @@
 <header>
     <div class="container">
         <a href="/"><h1>Kealifornia</h1></a>
-        <nav>
-
-        </nav>
     </div>
 </header>
 <div class="mainContent">
     <h3>Add new room</h3>
-
     <form id="form" name="room" th:action="@{'/saveroom'}" th:object="${room}"  method="post" onsubmit="return isEmpty(this)">
 
         <label for="room number">Room Number</label>
