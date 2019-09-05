@@ -60,7 +60,7 @@ public class CustomerRepository {
         return customerList;
     }
 
-    public Customer createRoom(Customer customer) {
+    public Customer createCustomer(Customer customer) {
 
         PreparedStatementCreator psc = new PreparedStatementCreator() {
             @Override
