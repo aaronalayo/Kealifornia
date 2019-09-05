@@ -75,7 +75,7 @@ public class RoomsController {
         room.setCapacity(room.getCapacity());
         room.setPrice(room.getPrice());
         room.setDescription(room.getDescription());
-        System.out.println(room);
+
         roomsRepo.update(room);
 
         return "redirect:/rooms";

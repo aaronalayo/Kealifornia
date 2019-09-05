@@ -18,20 +18,20 @@
 
     <form id="form" action="/updateroom" method="post" th:object="${editroom}" onsubmit="return isEmpty(this)">
 
-
-        <input type="hidden" th:value="*{room_id}" th:text="${editroom.room_id}">
+        <label for="room id">Room Id</label>
+        <input type="text" th:field="${editroom.room_id}" id="room id" placeholder="room id">
 
         <label for="room number">Room Number</label>
-        <input type="text" th:value="*{room_number}" th:text="${editroom.room_number}" id="room number" placeholder="room number">
+        <input type="text" th:text="${editroom.room_number}" id="room number" placeholder="room number">
 
         <label for="capacity">Capacity</label>
-        <input type="text" th:value="*{capacity}"  id="capacity" placeholder="Capacity">
+        <input type="text" th:field="${editroom.capacity}"  id="capacity" placeholder="Capacity">
 
         <label for="price">Price</label>
-        <input type="text" th:value="*{price}"  id="price" placeholder="price">
+        <input type="text" th:field="${editroom.price}"  id="price" placeholder="price">
 
         <label for="description">Description</label>
-        <input type="text" th:value="*{description}"  id="description" placeholder="description">
+        <input type="text" th:field="${editroom.description}"  id="description" placeholder="description">
 
         <button class="button" type="submit">Save</button>
         <a  class="button" href="/rooms " role="button" >Cancel</a>

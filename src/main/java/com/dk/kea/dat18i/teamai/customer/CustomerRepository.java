@@ -68,9 +68,11 @@ public class CustomerRepository {
 
                 PreparedStatement ps = connection.prepareStatement("INSERT INTO customer VALUES (null,?,?,?)", new String[]{"customer_id"});
 
+
                 ps.setString(1, customer.getFirst_name());
                 ps.setString(2, customer.getLast_name());
                 ps.setString(3, customer.getPhone_number());
+
 
                 return ps;
             }
