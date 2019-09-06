@@ -20,7 +20,7 @@ public class RoomsRepository {
 
     public Rooms findRoom(int room_id){
 
-        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM booking WHERE booking_id = " + room_id);
+        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM rooms WHERE room_id = ?;", room_id);
         Rooms room = new Rooms();
 
         while (rs.next()) {

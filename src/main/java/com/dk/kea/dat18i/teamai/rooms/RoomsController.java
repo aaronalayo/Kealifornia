@@ -62,9 +62,11 @@ public class RoomsController {
 
 
     @GetMapping("/rooms/edit/{room_id}")
-    public String editRoom (Model m, @PathVariable(name="room_id") int room_id){
-       Rooms roomToEdit= roomsRepo.findRoom(room_id);
+    public String editRoom (Model m, @PathVariable(name = "room_id")int room_id){
+
+        Rooms roomToEdit= roomsRepo.findRoom(room_id);
         m.addAttribute("editroom",roomToEdit);
+
         return "edit-room";
     }
 
