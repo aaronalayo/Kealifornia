@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a room</title>
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+    </div>
+</header>
+<div class="mainContent">
+    <h3>Choose Date</h3>
+    <form id="form" name="booking" th:action="@{'/savebooking'}" th:object="${booking}"  method="post"  onsubmit="return isEmpty(this)">
+
+        <label for="check-in">Check in</label>
+        <input   type="date" th:field="${booking.check_in}"  id="check-in" min="today" >
+
+        <label for="check-out">Check out</label>
+        <input type="date" th:field="${booking.check_out}"  id="check-out">
+        <br>
+        <br>
+        <label for="persons">Number of persons</label>
+        <input type="number" th:field="${booking.persons}" id="persons" min="1" max="10">
+        <br>
+        <br>
+        <label for="roomquantity">How many rooms do you need</label>
+        <input type="number" th:field="${booking.number_of_rooms}" id="roomquantity">
+        <br>
+        <br>
+        <button class="button" type="submit">Save</button>
+        <a  class="button" href="/index " role="button" >Cancel</a>
+
+        <p id="demo"></p>
+    </form>
+
+    <script>
+        function isEmpty(form){
+            var x=form.getElementsByTagName("input");
+            for(var i=0;i<x.length;i++){
+                if(x[i].value==0 || x[i].value==""){
+                    alert("Please insert " + x[i].id+ "!");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function minDate() {
+            var x = document.getElementById("check-in").min;
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+
+</div>
+</body>
+</html>

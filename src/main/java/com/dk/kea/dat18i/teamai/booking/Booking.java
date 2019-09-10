@@ -11,22 +11,26 @@ public class Booking {
     private int booking_id;
     private Date check_in;
     private Date check_out;
-    private Customer customer_id;
-    private Rooms room_id;
+    private int persons;
+    private int number_of_rooms;
+    private Customer customer;
+    private Rooms room;
 
     public Booking() {
     }
 
-    public Booking(int booking_id, Date check_in, Date check_out, Customer customer_id, Rooms room_id) {
+    public Booking(int booking_id, Date check_in, Date check_out, int persons, int number_of_rooms, Customer customer, Rooms room) {
         this.booking_id = booking_id;
         this.check_in = check_in;
         this.check_out = check_out;
-        this.customer_id = customer_id;
-        this.room_id = room_id;
+        this.persons = persons;
+        this.number_of_rooms = number_of_rooms;
+        this.customer = customer;
+        this.room = room;
     }
 
     public int getBooking_id() {
-        return booking_id;
+        return this.booking_id;
     }
 
     public void setBooking_id(int booking_id) {
@@ -49,19 +53,35 @@ public class Booking {
         this.check_out = check_out;
     }
 
-    public Customer getCustomer_id() {
-        return customer_id;
+    public int getPersons() {
+        return persons;
     }
 
-    public void setCustomer_id(Customer customer_id) {
-        this.customer_id = customer_id;
+    public void setPersons(int persons) {
+        this.persons = persons;
     }
 
-    public Rooms getRoom_id() {
-        return room_id;
+    public int getNumber_of_rooms() {
+        return number_of_rooms;
     }
 
-    public void setRoom_id(Rooms room_id) {
-        this.room_id = room_id;
+    public void setNumber_of_rooms(int number_of_rooms) {
+        this.number_of_rooms = number_of_rooms;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Rooms getRoom() {
+        return room;
+    }
+
+    public void setRoom(Rooms room) {
+        this.room = room;
     }
 }

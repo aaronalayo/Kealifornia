@@ -15,6 +15,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+.idea/**
 *.iws
 *.iml
 *.ipr
@@ -30,6 +31,4 @@ build/
 ### VS Code ###
 .vscode/
 
-src/main/resources/application.properties
-.idea/workspace.xml
-
+/src/main/resources/application.properties

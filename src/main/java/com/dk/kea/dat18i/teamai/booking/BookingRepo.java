@@ -1,17 +1,21 @@
 package com.dk.kea.dat18i.teamai.booking;
 
+import com.dk.kea.dat18i.teamai.customer.CustomerRepository;
+import com.dk.kea.dat18i.teamai.rooms.RoomsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -20,14 +24,38 @@ public class BookingRepo {
         @Autowired
         private JdbcTemplate jdbc;
 
+        @Autowired
+        private CustomerRepository customerRepo;
 
-        public List<Booking> findAll() {
-            String sql = "SELECT * FROM booking";
-            List<Booking> theaters = jdbc.query(sql, new BeanPropertyRowMapper<>(Booking.class));
+        @Autowired
+        private RoomsRepository roomRepo;
+//        public List<Booking> findAll() {
+//            String sql = "SELECT * FROM booking";
+//            List<Booking> bookings = jdbc.query(sql, new BeanPropertyRowMapper<>(Booking.class));
+//
+//            return bookings;
+//        }
 
-            return theaters;
+    public List<Booking> findAll() {
+
+        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM booking");
+
+        List<Booking> bookingList = new ArrayList<>();
+
+        while (rs.next()) {
+            Booking booking = new Booking();
+
+            booking.setBooking_id(rs.getInt("booking_id"));
+            booking.setCheck_in(rs.getDate("check_in_date"));
+            booking.setCheck_out(rs.getDate("check_out"));
+            booking.setPersons(rs.getInt("persons"));
+            booking.setNumber_of_rooms(rs.getInt("number_of_rooms"));
+            booking.setCustomer(customerRepo.findCustomer(rs.getInt("customer_id")));
+            booking.setRoom(roomRepo.findRoom(rs.getInt("room_id")));
+            bookingList.add(booking);
         }
-
+        return bookingList;
+    }
         public Booking findOne(int id) {
             String sql = "SELECT * FROM booking WHERE id=" + id;
             return jdbc.queryForObject(sql, new BeanPropertyRowMapper<>(Booking.class));
@@ -37,7 +65,7 @@ public class BookingRepo {
         public int addBooking(Booking booking) {
 
             KeyHolder id = new GeneratedKeyHolder();
-            String sql = "INSERT INTO booking VALUES (null,?,?,?,?)";
+            String sql = "INSERT INTO booking VALUES (null,?,?,?,?,?,?)";
 
             PreparedStatementCreator psc = new PreparedStatementCreator() {
                 @Override
@@ -46,8 +74,10 @@ public class BookingRepo {
                     //ps.setInt(1, 1);
                     ps.setDate(1, booking.getCheck_in());
                     ps.setDate(2, booking.getCheck_out());
-                    ps.setObject(3, booking.getCustomer_id());
-                    ps.setObject(4, booking.getRoom_id());
+                    ps.setInt(3,booking.getPersons());
+                    ps.setInt(4, booking.getNumber_of_rooms());
+                    ps.setObject(5, booking.getCustomer());
+                    ps.setObject(6, booking.getRoom());
                     return ps;
 
                 }
@@ -59,8 +89,8 @@ public class BookingRepo {
         }
 
         public void updateOne(int id, Booking booking) {
-            String sql = "UPDATE booking SET check_in = ?, check_out = ?, customer_id = ?, room_id = ? WHERE id = ?";
-            jdbc.update(sql, booking.getCheck_in(), booking.getCheck_out(), booking.getCustomer_id(), booking.getRoom_id(), id);
+            String sql = "UPDATE booking SET check_in = ?, check_out = ?, persons = ?, number_of_rooms = ?, customer_id = ?, room_id = ? WHERE id = ?";
+            jdbc.update(sql, booking.getCheck_in(), booking.getCheck_out(), booking.getPersons(), booking.getNumber_of_rooms(), booking.getCustomer(), booking.getRoom(), id);
         }
 
         public void deleteOne(int id) {

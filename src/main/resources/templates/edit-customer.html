@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Room</title>
+    <title>Edit Customer</title>
 </head>
 <body>
 <header>
@@ -14,24 +14,21 @@
     </div>
 </header>
 <div class="mainContent">
-    <h3>Edit Room</h3>
+    <h3>Edit Customer</h3>
 
-        <form id="form" action="/updateroom"  th:object="${editroom}" method="post"  onsubmit="return isEmpty(this)">
+    <form id="form" action="/updatecustomer"  th:object="${editcustomer}" method="post"  onsubmit="return isEmpty(this)">
 
 
-        <input type="hidden"  th:field="*{room_id}" id="room_id">
+        <input type="hidden"  th:field="*{customer_id}" id="customer_id">
 
-        <label for="room_number">Room Number</label>
-        <input type="text" id="room_number" th:field="*{room_number}">
+        <label for="first_name">First Name</label>
+        <input type="text" th:field="*{first_name}" id="first_name">
 
-        <label for="capacity">Capacity</label>
-        <input type="text" th:field="*{capacity}"  id="capacity" placeholder="Capacity">
+        <label for="last_name">Last Name</label>
+        <input type="text" th:field="*{last_name}"  id="last_name">
 
-        <label for="price">Price</label>
-        <input type="text" th:field="*{price}"  id="price" placeholder="price">
-
-        <label for="description">Description</label>
-        <input type="text" th:field="*{description}"  id="description" placeholder="description">
+        <label for="phone_number">Price</label>
+        <input type="text" th:field="*{phone_number}"  id="phone_number">
 
         <button class="button" type="submit">Save</button>
         <a  class="button" href="/rooms " role="button" >Cancel</a>

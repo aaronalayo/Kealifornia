@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e859f2-7173-4cf9-8b95-6d38822bd955" name="Default Changelist" comment="">
+
       <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/Customer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/customer/CustomerRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" afterDir="false" />
@@ -15,6 +16,21 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/show-rooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/show-rooms.html" afterDir="false" />
+
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/book-room.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show-bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/show-bookings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +73,7 @@
   <component name="ProjectId" id="1QK8EbxI7KxAJETNKNrX0Vutpt4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -146,7 +163,18 @@
       <workItem from="1567545211224" duration="4887000" />
       <workItem from="1567584942153" duration="4726000" />
       <workItem from="1567594240591" duration="4764000" />
+
       <workItem from="1567623506591" duration="3368000" />
+
+      <workItem from="1567623506591" duration="10915000" />
+      <workItem from="1567678879041" duration="537000" />
+      <workItem from="1567679476693" duration="5973000" />
+      <workItem from="1567880999157" duration="1422000" />
+      <workItem from="1568013914182" duration="12870000" />
+      <workItem from="1568055913517" duration="625000" />
+      <workItem from="1568104112016" duration="3227000" />
+      <workItem from="1568116359806" duration="504000" />
+
     </task>
     <servers />
   </component>
@@ -171,4 +199,9 @@
       <path value="$PROJECT_DIR$/Kealifornia" />
     </ignored-roots>
   </component>
+
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Kealifornia$KealiforniaApplication.ic" NAME="KealiforniaApplication Coverage Results" MODIFIED="1567679298986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+
 </project>

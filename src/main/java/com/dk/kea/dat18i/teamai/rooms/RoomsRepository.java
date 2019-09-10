@@ -18,19 +18,19 @@ public class RoomsRepository {
     @Autowired
     private JdbcTemplate jdbc;
 
-    public Rooms findRoom(int room_id){
+    public Rooms findRoom(int room_id) {
 
-        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM booking WHERE booking_id = " + room_id);
+        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM rooms WHERE room_id = ?;", room_id);
         Rooms room = new Rooms();
 
         while (rs.next()) {
 
 
-           room.setRoom_id(rs.getInt("room_id"));
-           room.setRoom_number(rs.getInt("room_number"));
-           room.setCapacity(rs.getInt("capacity"));
-           room.setPrice(rs.getDouble("price"));
-           room.setDescription(rs.getString("description"));
+            room.setRoom_id(rs.getInt("room_id"));
+            room.setRoom_number(rs.getInt("room_number"));
+            room.setCapacity(rs.getInt("capacity"));
+            room.setPrice(rs.getDouble("price"));
+            room.setDescription(rs.getString("description"));
 
 
         }
@@ -75,6 +75,7 @@ public class RoomsRepository {
         jdbc.update(psc);
         return rooms;
     }
+
     public void deleteRoom(int room_id) {
 
         jdbc.execute("DELETE FROM rooms WHERE room_id = " + room_id);
@@ -90,7 +91,7 @@ public class RoomsRepository {
                 PreparedStatement ps = connection.prepareStatement("UPDATE rooms SET room_number = ?, capacity = ?, price = ?, description = ? WHERE room_id =  " + room.getRoom_id(), new String[]{"room_id"});
 
 
-                ps.setInt(1,room.getRoom_number());
+                ps.setInt(1, room.getRoom_number());
                 ps.setInt(2, room.getCapacity());
                 ps.setDouble(3, room.getPrice());
                 ps.setString(4, room.getDescription());
@@ -106,7 +107,8 @@ public class RoomsRepository {
     }
 
 
+    }
 
 
 
-}
+
