@@ -1,5 +1,6 @@
 package com.dk.kea.dat18i.teamai.rooms;
 
+import com.dk.kea.dat18i.teamai.booking.BookingRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,8 @@ public class RoomsController {
 
     @Autowired
     private RoomsRepository roomsRepo;
+
+    @Autowired
 
     @GetMapping("/roomview")
     public Rooms showRoom(){
