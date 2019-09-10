@@ -71,7 +71,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1QK8EbxI7KxAJETNKNrX0Vutpt4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -139,7 +141,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@97b62df1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@97b62df1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58ce7300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -163,9 +175,7 @@
       <workItem from="1567545211224" duration="4887000" />
       <workItem from="1567584942153" duration="4726000" />
       <workItem from="1567594240591" duration="4764000" />
-
       <workItem from="1567623506591" duration="3368000" />
-
       <workItem from="1567623506591" duration="10915000" />
       <workItem from="1567678879041" duration="537000" />
       <workItem from="1567679476693" duration="5973000" />
@@ -174,7 +184,6 @@
       <workItem from="1568055913517" duration="625000" />
       <workItem from="1568104112016" duration="3227000" />
       <workItem from="1568116359806" duration="504000" />
-
     </task>
     <servers />
   </component>
@@ -199,9 +208,7 @@
       <path value="$PROJECT_DIR$/Kealifornia" />
     </ignored-roots>
   </component>
-
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Kealifornia$KealiforniaApplication.ic" NAME="KealiforniaApplication Coverage Results" MODIFIED="1567679298986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-
 </project>
