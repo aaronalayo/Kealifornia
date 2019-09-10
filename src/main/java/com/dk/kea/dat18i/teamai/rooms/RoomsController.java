@@ -85,4 +85,11 @@ public class RoomsController {
 
         return "redirect:/rooms";
     }
+    @GetMapping("/select/rooms")
+    public String selectRoom(Model m){
+        List<Rooms> roomsList = roomsRepo.findAllRooms();
+        m.addAttribute("rooms", roomsList);
+        return "select-room";
+
+    }
 }

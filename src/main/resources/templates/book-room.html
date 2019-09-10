@@ -16,7 +16,7 @@
 </header>
 <div class="mainContent">
     <h3>Choose Date</h3>
-    <form id="form" name="booking" th:action="@{'/savebooking'}" th:object="${booking}"  method="post"  onsubmit="return isEmpty(this)">
+    <form id="form" name="booking" th:action="@{'/select/rooms'}" th:object="${booking}"  method="get"  onsubmit="return isEmpty(this)">
 
         <label for="check-in">Check in</label>
         <input   type="date" th:field="${booking.check_in}"  id="check-in" min="today" >
