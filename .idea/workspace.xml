@@ -20,11 +20,13 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/book-room.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/booking/BookingRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/book-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/book-room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/show-bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/show-bookings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" afterDir="false" />
@@ -57,6 +59,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -83,7 +86,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -91,6 +95,16 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/images/css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -141,17 +155,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@97b62df1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@97b62df1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58ce7300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -183,7 +187,7 @@
       <workItem from="1568013914182" duration="12870000" />
       <workItem from="1568055913517" duration="625000" />
       <workItem from="1568104112016" duration="3227000" />
-      <workItem from="1568116359806" duration="504000" />
+      <workItem from="1568116359806" duration="3403000" />
     </task>
     <servers />
   </component>
