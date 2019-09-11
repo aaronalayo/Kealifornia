@@ -48,7 +48,7 @@ public class BookingController {
 
         bookingRepo.addBooking(newBooking);
 
-        return "redirect:/customerinfo";
+        return "Booking-Recap";
     }
    @GetMapping("/customerinfo")
    public String customerInfo(Model model){
@@ -68,6 +68,18 @@ public class BookingController {
     public void deleteOne(@PathVariable int id){
         bookingRepo.deleteOne(id);
 
+    }
+
+    @GetMapping("/summary")
+    public String bookingSummary(@ModelAttribute Booking booking){
+        Booking newBooking = new Booking();
+
+        newBooking.getCheck_in();
+        newBooking.getCheck_out();
+        newBooking.getCustomer();
+        newBooking.getRoom();
+
+        return "Booking-Recap";
     }
 
 

@@ -49,7 +49,7 @@ public class CustomerController {
 
         customerRepo.createCustomer(newCustomer);
 
-        return "redirect:/customer";
+        return "redirect:/summary";
     }
 
     @RequestMapping(value = "customer/delete/{customer_id}")
