@@ -70,16 +70,9 @@ public class BookingController {
 
     }
 
-    @GetMapping("/summary")
-    public String bookingSummary(@ModelAttribute Booking booking){
-        Booking newBooking = new Booking();
-
-        newBooking.getCheck_in();
-        newBooking.getCheck_out();
-        newBooking.getCustomer();
-        newBooking.getRoom();
-
-        return "Booking-Recap";
+    @GetMapping("/summary/{id}")
+    public Booking bookingSummary(@PathVariable int id){
+        return bookingRepo.findOne(id);
     }
 
 

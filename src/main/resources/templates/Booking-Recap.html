@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
 </head>
@@ -16,9 +16,16 @@
         <th>Email</th>
         <th>Room number</th>
     </tr>
-    <tr>
-        <td th:text="${customer.getFirst_name}">{{Name}}</td>
-
+        <tr th:each="booking: ${bookings}" >
+            <th scope="row" th:text="${booking.booking_id}">1</th>
+            <td th:text="${booking.check_in}">{{Check-in}}</td>
+            <td th:text="${booking.check_out}">{{Check-out}}</td>
+            <td th:text="${booking.persons}">{{Number of Persons}}</td>
+            <td th:text="${booking.number_of_rooms}">{{Number of Rooms}}</td>
+            <td th:text="${booking.customer.first_name}">{{Customer}}</td>
+            <td th:text="${booking.room.room_number}">{{Room Number}}</td>
+    </tr>
+    </form>
 </table>
 
 
