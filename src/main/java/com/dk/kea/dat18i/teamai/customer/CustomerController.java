@@ -1,5 +1,6 @@
 package com.dk.kea.dat18i.teamai.customer;
 
+import com.dk.kea.dat18i.teamai.booking.BookingRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,8 @@ public class CustomerController {
 
     @Autowired
     private CustomerRepository customerRepo;
+    @Autowired
+    private BookingRepo bookingRepo;
 
     @GetMapping("/customerview")
     public Customer showCustomer(){
@@ -49,7 +52,9 @@ public class CustomerController {
 
         customerRepo.createCustomer(newCustomer);
 
-        return "redirect:/summary/{id}";
+        customerRepo.addCustomerBooking();
+
+        return "redirect:/summary";
     }
 
     @RequestMapping(value = "customer/delete/{customer_id}")

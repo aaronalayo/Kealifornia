@@ -1,5 +1,6 @@
 package com.dk.kea.dat18i.teamai.booking;
 
+import com.dk.kea.dat18i.teamai.customer.Customer;
 import com.dk.kea.dat18i.teamai.customer.CustomerRepository;
 import com.dk.kea.dat18i.teamai.rooms.RoomsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,13 +57,37 @@ public class BookingRepo {
         }
         return bookingList;
     }
-        public Booking findOne(int id) {
-            String sql = "SELECT * FROM booking WHERE id=" + id;
-            return jdbc.queryForObject(sql, new BeanPropertyRowMapper<>(Booking.class));
+//        public Booking findOne(int booking_id) {
+//            String sql = "SELECT * FROM booking WHERE booking_id=" + booking_id;
+//            return jdbc.queryForObject(sql, new BeanPropertyRowMapper<>(Booking.class));
+//        }
+
+    public Booking  findOne(int booking_id){
+
+        SqlRowSet rs = jdbc.queryForRowSet("SELECT * FROM booking WHERE booking_id = " + booking_id);
+
+        Booking booking = new Booking();
+
+        while (rs.next()) {
+
+
+            booking.setBooking_id(rs.getInt("booking_id"));
+            booking.setCheck_in(rs.getDate("check_in_date"));
+            booking.setCheck_out(rs.getDate("check_out"));
+            booking.setPersons(rs.getInt("persons"));
+            booking.setNumber_of_rooms(rs.getInt("number_of_rooms"));
+            booking.setCustomer(customerRepo.findCustomer(rs.getInt("customer_id")));
+            booking.setRoom(roomRepo.findRoom(rs.getInt("room_id")));
+
+
+
         }
+        return booking;
+    }
 
 
-        public int addBooking(Booking booking) {
+
+    public int addBooking(Booking booking) {
 
             KeyHolder id = new GeneratedKeyHolder();
             String sql = "INSERT INTO booking VALUES (null,?,?,?,?,?,?)";
@@ -97,4 +122,6 @@ public class BookingRepo {
 
             jdbc.update("DELETE FROM booking WHERE id = " + id);
         }
-    }
+
+
+}

@@ -45,6 +45,7 @@ public class RoomsController {
     public String saveRoom(@ModelAttribute Rooms room){
         Rooms newRoom = new Rooms();
 
+        newRoom.setRoom_number(room.getRoom_number());
         newRoom.setCapacity(room.getCapacity());
         newRoom.setPrice(room.getPrice());
         newRoom.setDescription(room.getDescription());

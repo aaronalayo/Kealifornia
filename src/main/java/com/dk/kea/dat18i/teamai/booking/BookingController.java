@@ -42,13 +42,13 @@ public class BookingController {
         newBooking.setCheck_out(booking.getCheck_out());
         newBooking.setPersons(booking.getPersons());
         newBooking.setNumber_of_rooms(booking.getNumber_of_rooms());
-        newBooking.setCustomer(booking.getCustomer());
-        newBooking.setRoom(booking.getRoom());
+
 
 
         bookingRepo.addBooking(newBooking);
 
-        return "Booking-Recap";
+
+        return  "redirect:/select/rooms";
     }
    @GetMapping("/customerinfo")
    public String customerInfo(Model model){
@@ -70,9 +70,12 @@ public class BookingController {
 
     }
 
-    @GetMapping("/summary/{id}")
-    public Booking bookingSummary(@PathVariable int id){
-        return bookingRepo.findOne(id);
+    @GetMapping("/summary")
+    public Booking bookingSummary(){
+
+        Booking booking = bookingRepo.findOne(1);
+
+        return booking;
     }
 
 

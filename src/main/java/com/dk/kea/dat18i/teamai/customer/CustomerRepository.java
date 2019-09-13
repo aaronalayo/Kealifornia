@@ -1,10 +1,12 @@
 package com.dk.kea.dat18i.teamai.customer;
 
+import com.dk.kea.dat18i.teamai.booking.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -79,6 +81,8 @@ public class CustomerRepository {
         };
         jdbc.update(psc);
         return customer;
+
+
     }
     public void deleteCustomer(int customer_id) {
 
@@ -107,6 +111,14 @@ public class CustomerRepository {
 
         jdbc.update(psc);
         return customer;
+    }
+    public void addCustomerBooking() {
+        //String sql1 = "SET foreign_key_checks = 0";
+        String sql = "UPDATE booking join customer ON booking.customer_id = booking.customer_id SET booking.customer_id = customer.customer_id where booking_id =  (select max(booking_id))";
+        //String sql2 = "SET foreign_key_checks = 1";
+       // jdbc.update(sql1);
+        jdbc.update(sql);
+       // jdbc.update(sql2);
     }
 
 }

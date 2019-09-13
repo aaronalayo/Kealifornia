@@ -16,8 +16,7 @@
 </header>
 <div class="mainContent">
     <h3>Choose Date</h3>
-    <form id="form" name="booking" th:action="@{'/select/rooms'}" th:object="${booking}"  method="get"  onsubmit="return isEmpty(this)">
-
+    <form id="form" name="booking" th:action="@{'/savebooking'}" th:object="${booking}"  method="post"  onsubmit="return isEmpty(this)">
         <label for="check-in">Check in</label>
         <input   type="date" th:field="${booking.check_in}"  id="check-in" min="today" >
 
@@ -25,15 +24,15 @@
         <input type="date" th:field="${booking.check_out}"  id="check-out">
         <br>
         <br>
-        <label for="persons">Number of persons</label>
+        <label for="persons">Persons</label>
         <input type="number" th:field="${booking.persons}" id="persons" min="1" max="10">
         <br>
         <br>
-        <label for="roomquantity">How many rooms do you need</label>
+        <label for="roomquantity">Rooms</label>
         <input type="number" th:field="${booking.number_of_rooms}" id="roomquantity">
         <br>
         <br>
-        <button class="button" type="submit">Save</button>
+        <button class="button" type="submit">Book</button>
         <a  class="button" href="/index " role="button" >Cancel</a>
 
         <p id="demo"></p>
