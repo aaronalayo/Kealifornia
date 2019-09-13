@@ -90,19 +90,17 @@ public class BookingRepo {
     public int addBooking(Booking booking) {
 
             KeyHolder id = new GeneratedKeyHolder();
-            String sql = "INSERT INTO booking VALUES (null,?,?,?,?,?,?)";
+            String sql = "INSERT INTO booking VALUES (null,?,?,?,?)";
 
             PreparedStatementCreator psc = new PreparedStatementCreator() {
                 @Override
                 public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
                     PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-                    //ps.setInt(1, 1);
+
                     ps.setDate(1, booking.getCheck_in());
                     ps.setDate(2, booking.getCheck_out());
                     ps.setInt(3,booking.getPersons());
                     ps.setInt(4, booking.getNumber_of_rooms());
-                    ps.setObject(5, booking.getCustomer());
-                    ps.setObject(6, booking.getRoom());
                     return ps;
 
                 }

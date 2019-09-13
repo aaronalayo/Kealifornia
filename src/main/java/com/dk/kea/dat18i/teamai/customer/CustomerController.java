@@ -1,6 +1,8 @@
 package com.dk.kea.dat18i.teamai.customer;
 
 import com.dk.kea.dat18i.teamai.booking.BookingRepo;
+import com.dk.kea.dat18i.teamai.log.Log;
+import com.dk.kea.dat18i.teamai.log.LogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +16,7 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepo;
     @Autowired
-    private BookingRepo bookingRepo;
+    private LogRepository logRepo;
 
     @GetMapping("/customerview")
     public Customer showCustomer(){
@@ -52,7 +54,9 @@ public class CustomerController {
 
         customerRepo.createCustomer(newCustomer);
 
-        customerRepo.addCustomerBooking();
+        logRepo.addBookingCustomer();
+
+
 
         return "redirect:/summary";
     }
