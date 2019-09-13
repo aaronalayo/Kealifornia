@@ -7,16 +7,26 @@ public class Rooms {
     private int capacity;
     private double price;
     private String description;
+    private int hotel_id;
 
     public Rooms() {
     }
 
-    public Rooms(int room_id, int room_number, int capacity, double price, String description) {
+    public Rooms(int room_id, int room_number, int capacity, double price, String description, int hotel_id) {
         this.room_id = room_id;
         this.room_number = room_number;
         this.capacity = capacity;
         this.price = price;
         this.description = description;
+        this.hotel_id = hotel_id;
+    }
+
+    public int getHotel_id() {
+        return hotel_id;
+    }
+
+    public void setHotel_id(int hotel_id) {
+        this.hotel_id = hotel_id;
     }
 
     public int getRoom_id() {
@@ -66,7 +76,8 @@ public class Rooms {
                 ", room_number=" + room_number +
                 ", capacity=" + capacity +
                 ", price=" + price +
-                ", description='" + description + '\'' +
+                ", description='" + description +
+                ", hotel_id'" + hotel_id + '\'' +
                 '}';
     }
 }

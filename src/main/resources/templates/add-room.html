@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Rooms view</title>
@@ -31,12 +31,15 @@
         <label for="description">Description</label>
         <input type="text" th:field="${room.description}"  id="description" placeholder="description">
 
+        <label for="hotel">Hotel</label>
+        <select th:field="${room.getHotel_id()}"  id="hotel"> <option th:field="${room.getHotel_id()}" th:value="${room.getHotel_id()}" th:text="${room.getHotel_id()}"></option></select>
 
         <button class="button" type="submit">Save</button>
         <a  class="button" href="/rooms " role="button" >Cancel</a>
 
 
     </form>
+
     <script>
         function isEmpty(form){
             var x=form.getElementsByTagName("input");
