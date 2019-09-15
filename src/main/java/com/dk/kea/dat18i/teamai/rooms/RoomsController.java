@@ -49,6 +49,7 @@ public class RoomsController {
         newRoom.setCapacity(room.getCapacity());
         newRoom.setPrice(room.getPrice());
         newRoom.setDescription(room.getDescription());
+        newRoom.setHotel_id(room.getHotel_id());
 
 
         roomsRepo.createRoom(newRoom);
@@ -81,6 +82,7 @@ public class RoomsController {
         room.setCapacity(room.getCapacity());
         room.setPrice(room.getPrice());
         room.setDescription(room.getDescription());
+        room.setHotel_id(room.getHotel_id());
 
         roomsRepo.update(room);
 

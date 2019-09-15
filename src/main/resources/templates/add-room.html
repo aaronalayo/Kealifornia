@@ -26,13 +26,13 @@
 
 
         <label for="price">Price</label>
-        <input type="text" th:field="${room.price}"  id="price" placeholder="price">
+        <input type="number" th:field="${room.price}"  id="price" placeholder="price">
 
         <label for="description">Description</label>
         <input type="text" th:field="${room.description}"  id="description" placeholder="description">
 
         <label for="hotel">Hotel</label>
-        <select th:field="${room.getHotel_id()}"  id="hotel"> <option th:field="${room.getHotel_id()}" th:value="${room.getHotel_id()}" th:text="${room.getHotel_id()}"></option></select>
+        <select th:field="${room.hotel_id}" id="hotel"> <option th:each="hotels : ${room.hotel_id}" th:value="${room.hotel_id}" th:text="${room.hotel_id}"></option></select>
 
         <button class="button" type="submit">Save</button>
         <a  class="button" href="/rooms " role="button" >Cancel</a>
