@@ -112,4 +112,24 @@ public class CustomerRepository {
         jdbc.update(psc);
         return customer;
     }
+
+    public Customer findLastCustomer() {
+
+        SqlRowSet rs = jdbc.queryForRowSet("select  * from customer where customer_id = (select (max(customer_id)) from customer)");
+
+
+        Customer customerLast = new Customer();
+
+        while (rs.next()) {
+
+
+            customerLast.setCustomer_id(rs.getInt("customer_id"));
+            customerLast.setFirst_name(rs.getString("first_name"));
+            customerLast.setLast_name(rs.getString("last_name"));
+            customerLast.setPhone_number(rs.getString("phone_number"));
+
+        }
+        return customerLast;
+    }
+
 }

@@ -106,8 +106,45 @@ public class RoomsRepository {
         return room;
     }
 
+    public Rooms findLastRoom() {
 
+        SqlRowSet rs = jdbc.queryForRowSet("select  * from rooms where room_id = (select (max(room_id)) from rooms)");
+
+
+        Rooms roomLast = new Rooms();
+
+        while (rs.next()) {
+
+
+            roomLast.setRoom_id(rs.getInt("room_id"));
+            roomLast.setRoom_number(rs.getInt("room_number"));
+            roomLast.setCapacity(rs.getInt("capacity"));
+            roomLast.setPrice(rs.getDouble("price"));
+            roomLast.setDescription(rs.getString("description"));
+
+        }
+        return roomLast;
     }
+
+    public BookedRoom createBookedRoom(BookedRoom bookedRoom) {
+
+        PreparedStatementCreator psc = new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+
+                PreparedStatement ps = connection.prepareStatement("INSERT INTO bookedroom VALUES (null,?)", new String[]{"booked_room_id"});
+
+                ps.setInt(1, bookedRoom.getRoom().getRoom_id());
+
+
+                return ps;
+            }
+        };
+        jdbc.update(psc);
+        return bookedRoom;
+    }
+
+}
 
 
 

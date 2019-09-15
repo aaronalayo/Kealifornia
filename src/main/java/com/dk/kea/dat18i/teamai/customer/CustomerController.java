@@ -1,8 +1,10 @@
 package com.dk.kea.dat18i.teamai.customer;
 
+import com.dk.kea.dat18i.teamai.booking.Booking;
 import com.dk.kea.dat18i.teamai.booking.BookingRepo;
-import com.dk.kea.dat18i.teamai.log.Log;
 import com.dk.kea.dat18i.teamai.log.LogRepository;
+import com.dk.kea.dat18i.teamai.rooms.Rooms;
+import com.dk.kea.dat18i.teamai.rooms.RoomsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,10 @@ public class CustomerController {
     private CustomerRepository customerRepo;
     @Autowired
     private LogRepository logRepo;
+    @Autowired
+    private BookingRepo bookingRepo;
+    @Autowired
+    private RoomsRepository roomsRepo;
 
     @GetMapping("/customerview")
     public Customer showCustomer(){
@@ -62,7 +68,7 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "customer/delete/{customer_id}")
-    public String removeScreening(@PathVariable int customer_id) {
+    public String removeCustomer(@PathVariable int customer_id) {
 
         customerRepo.deleteCustomer(customer_id);
 
@@ -88,4 +94,21 @@ public class CustomerController {
 
         return "redirect:/customer";
     }
+
+    @GetMapping("/summary")
+    public String summary(Model model) {
+
+        Customer customerLast = customerRepo.findLastCustomer();
+        model.addAttribute("lastcustomer", customerLast);
+
+        Booking bookingLast = bookingRepo.findLastBooking();
+        model.addAttribute("lastbooking", bookingLast);
+
+        Rooms roomLast = roomsRepo.findLastRoom();
+        model.addAttribute("lastroom", roomLast);
+
+        return "show-summary";
+    }
+
+
 }

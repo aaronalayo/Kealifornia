@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -87,10 +88,29 @@ public class RoomsController {
         return "redirect:/rooms";
     }
     @GetMapping("/select/rooms")
-    public String selectRoom(Model m){
+    public String selectRoom( Model m){
         List<Rooms> roomsList = roomsRepo.findAllRooms();
         m.addAttribute("rooms", roomsList);
+
+
+
         return "select-room";
 
     }
+//    @GetMapping("/select/rooms/{room_id_id}")
+//    public String bookedRooms(Model model,@PathVariable(name="room_id") int room_id){
+//
+//        BookedRoom bookedRoom = new BookedRoom();
+//
+//        //sets a list with theater seats for the screening and their availability
+//        seatCheck.setSeats( seatRepo.checkSeats(screeningRepo.findScreening(screening_id)));
+//        //sets an arrayList of seats as Strings
+//        seatCheck.setCheckedSeats( new ArrayList<>());
+//
+//        model.addAttribute( "screening_id",screeningRepo.findScreening( screening_id ).getScreening_id() );
+//        model.addAttribute("seatsCheck",seatCheck);
+//        return "seats";
+//    }
+
+
 }

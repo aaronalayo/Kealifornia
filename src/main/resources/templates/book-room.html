@@ -16,16 +16,20 @@
 </header>
 <div class="mainContent">
     <h3>Choose Date</h3>
-    <form id="form" name="booking" th:action="@{'/savebooking'}" th:object="${booking}"  method="post"  onsubmit="return isEmpty(this)">
+    <form id="form" name="booking" th:action="@{'/savebooking'}" th:object="${newbooking}"  method="post"  onsubmit="return isEmpty(this)">
         <label for="check-in">Check in</label>
-        <input   type="date" th:field="${booking.check_in}"  id="check-in" min="today" >
+        <input   type="date" th:field="${newbooking.check_in}"  id="check-in" min="today" >
 
         <label for="check-out">Check out</label>
-        <input type="date" th:field="${booking.check_out}"  id="check-out">
+        <input type="date" th:field="${newbooking.check_out}"  id="check-out">
         <br>
         <br>
         <label for="persons">Persons</label>
-        <input type="number" th:field="${booking.persons}" id="persons" min="1" max="10">
+        <input type="number" th:field="${newbooking.persons}" id="persons" min="1" max="10">
+        <br>
+        <br>
+        <label for="rooms">Rooms</label>
+        <input type="number" th:field="${newbooking.number_of_rooms}" id="rooms" min="1" max="10">
         <br>
         <br>
         <button class="button" type="submit">Book</button>
