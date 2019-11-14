@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbdc75ab-1816-4340-a1d6-bce494f61b0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Kealifornia-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kealifornia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kealifornia.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/hotel/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/hotel/HotelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/HHD-Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/HHD-Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dk/kea/dat18i/teamai/rooms/RoomsRepository.class" afterDir="false" />
-    </list>
+    <list default="true" id="bbdc75ab-1816-4340-a1d6-bce494f61b0c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +75,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BioTrio3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -215,7 +200,7 @@
       <workItem from="1568968746117" duration="614000" />
       <workItem from="1569178998410" duration="18000" />
       <workItem from="1570913378712" duration="47000" />
-      <workItem from="1573724887575" duration="640000" />
+      <workItem from="1573724887575" duration="961000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms view</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+
+        <nav>
+            <li>
+            <li><a href="/addroom">Add Room</a></li>
+
+            </li>
+        </nav>
+    </div>
+</header>
+
+<div class="mainContent">
+    <h2>List of Rooms</h2>
+
+    <table id="table">
+
+        <thead>
+        <th scope="col">Room Id</th>
+        <th scope="col">Room Number</th>
+        <th scope="col">Capacity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        </thead>
+
+
+<tr th:each="room: ${rooms}" >
+        <th scope="row" th:text="${room.getRoom_id()}">1</th>
+        <td th:text="${room.getRoom_number()}">{{Room Number}}</td>
+        <td th:text="${room.getCapacity()}">{{Capacity}}</td>
+        <td th:text="${room.getPrice()}">{{Price}}</td>
+        <td th:text="${room.getDescription()}">{{Description}}</td>
+
+        <td>
+            <a role="button" class="button1" th:href="@{'/rooms/edit/' + ${room.room_id}}" >Edit</a>
+        </td>
+
+        <td>
+            <a role="button" class="button2" th:href="@{'/rooms/delete/' + ${room.room_id}}" >Delete</a>
+        </td>
+    </tr>
+
+    </table>
+</div>
+</body>
+</html>

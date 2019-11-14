@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms view</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+
+        <nav>
+            <li>
+            <li><a href="/addcustomer">Add Customer</a></li>
+
+            </li>
+        </nav>
+    </div>
+</header>
+
+<div class="mainContent">
+    <h2>List of Customers</h2>
+
+    <table id="table">
+
+        <thead>
+        <th scope="col">Customer Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone Number</th>
+        </thead>
+
+
+        <tr th:each="customer: ${customers}" >
+            <th scope="row" th:text="${customer.getCustomer_id()}">1</th>
+            <td th:text="${customer.getFirst_name()}">{{First Name}}</td>
+            <td th:text="${customer.getLast_name()}">{{Last Name}}</td>
+            <td th:text="${customer.getPhone_number()}">{{Phone Number}}</td>
+
+            <td>
+                <a role="button" class="button" th:href="@{'/customer/edit/' + ${customer.customer_id}}" >Edit</a>
+            </td>
+
+            <td>
+                <a role="button" class="button" th:href="@{'/customer/delete/' + ${customer.customer_id}}" >Delete</a>
+            </td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>

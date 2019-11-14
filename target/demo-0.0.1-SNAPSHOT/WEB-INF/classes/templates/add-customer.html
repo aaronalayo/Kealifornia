@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms view</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+    </div>
+</header>
+<div class="mainContent">
+    <h3>Add new customer</h3>
+    <form id="form" name="customer" th:action="@{'/savecustomer'}" th:object="${customer}"  method="post" onsubmit="return isEmpty(this)">
+
+        <label for="first_name">First Name</label>
+        <input type="text" th:field="${customer.first_name}"  id="first_name" placeholder="First Name">
+
+        <label for="last_name">Last Name</label>
+        <input type="text" th:field="${customer.last_name}"  id="last_name" placeholder="Last Name">
+
+        <label for="phone_number">Phone Number</label>
+        <input type="text" th:field="${customer.phone_number}"  id="phone_number" placeholder="phone number">
+
+
+        <button class="button" type="submit">Save</button>
+        <a  class="button" href="/index " role="button" >Cancel</a>
+
+
+    </form>
+    <script>
+        function isEmpty(form){
+            var x=form.getElementsByTagName("input");
+            for(var i=0;i<x.length;i++){
+                if(x[i].value==0 || x[i].value==""){
+                    alert("Please insert " + x[i].id+ "!");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+
+</div>
+</body>
+</html>

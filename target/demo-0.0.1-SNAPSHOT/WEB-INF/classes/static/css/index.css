@@ -1,0 +1,51 @@
+body, html{
+    height: 100%;
+
+
+
+}
+
+
+
+.bg {
+    /* The image used */
+    background-image: url("../images/palms.jpg");
+
+    height: 100%;
+
+
+/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+h1{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+}
+h5{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+}
+h5{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+}
+h5 {
+    letter-spacing: 3px;
+    text-align: center;
+    color: white;
+}
+
+.hr-light {
+    border-top: 3px solid #fff;
+    width: 80px;
+}
+
+

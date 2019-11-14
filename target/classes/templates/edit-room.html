@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Room</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><h1>Kealifornia</h1></a>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </div>
+</header>
+<div class="mainContent">
+    <h3>Edit Room</h3>
+
+        <form id="form" action="/updateroom"  th:object="${editroom}" method="post"  onsubmit="return isEmpty(this)">
+
+
+        <input type="hidden"  th:field="*{room_id}" id="room_id">
+
+        <label for="room_number">Room Number</label>
+        <input type="text" id="room_number" th:field="*{room_number}">
+
+        <label for="capacity">Capacity</label>
+        <input type="text" th:field="*{capacity}"  id="capacity" placeholder="Capacity">
+
+        <label for="price">Price</label>
+        <input type="text" th:field="*{price}"  id="price" placeholder="price">
+
+        <label for="description">Description</label>
+        <input type="text" th:field="*{description}"  id="description" placeholder="description">
+
+        <button class="button" type="submit">Save</button>
+        <a  class="button" href="/rooms " role="button" >Cancel</a>
+
+        <script>
+            function isEmpty(form){
+                var x=form.getElementsByTagName("input");
+                for(var i=0;i<x.length;i++){
+                    if(x[i].value==0 || x[i].value==""){
+                        alert("Please insert " + x[i].id+ "!");
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+
+    </form>
+
+</div>
+</body>
+</html>
