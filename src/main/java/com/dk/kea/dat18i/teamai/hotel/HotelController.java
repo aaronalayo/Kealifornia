@@ -20,6 +20,10 @@ public class HotelController {
         return "HHD-Index";
     }
 
+    @GetMapping("/kealifornia")
+    public String indexForKealifornia(){
+        return "Kealifornia-index";}
+
     @GetMapping("/bookhhd")
     public String bookForHHD(Model Model){
         List<Rooms> roomsList = hotelRepo.findAllRooms();

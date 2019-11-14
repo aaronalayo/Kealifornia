@@ -126,23 +126,23 @@ public class RoomsRepository {
         return roomLast;
     }
 
-    public BookedRoom createBookedRoom(BookedRoom bookedRoom) {
-
-        PreparedStatementCreator psc = new PreparedStatementCreator() {
-            @Override
-            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-
-                PreparedStatement ps = connection.prepareStatement("INSERT INTO bookedroom VALUES (null,?)", new String[]{"booked_room_id"});
-
-                ps.setInt(1, bookedRoom.getRoom().getRoom_id());
-
-
-                return ps;
-            }
-        };
-        jdbc.update(psc);
-        return bookedRoom;
-    }
+//    public BookedRoom createBookedRoom(BookedRoom bookedRoom) {
+//
+//        PreparedStatementCreator psc = new PreparedStatementCreator() {
+//            @Override
+//            public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+//
+//                PreparedStatement ps = connection.prepareStatement("INSERT INTO bookedroom VALUES (null,?)", new String[]{"booked_room_id"});
+//
+//                ps.setInt(1, bookedRoom.getRoom().getRoom_id());
+//
+//
+//                return ps;
+//            }
+//        };
+//        jdbc.update(psc);
+//        return bookedRoom;
+//    }
 
 }
 
